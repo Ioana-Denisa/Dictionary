@@ -1,0 +1,82 @@
+﻿<Window x:Class="Tema1_Dictionar.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema1_Dictionar"
+        mc:Ignorable="d"
+        Title="Divertisment" Height="710" Width="840" MinHeight="710" MinWidth="840" ResizeMode="CanResize" >
+    <Grid Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF48207B"/>
+                <GradientStop Color="#FFA319AB" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Style>
+            <Style/>
+        </Grid.Style>
+        <TextBlock x:Name="Title" VerticalAlignment="Top"
+                HorizontalAlignment="Left" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" Grid.Column="1" Text=" Joacă jocul" IsEnabled="False" Margin="10,10,0,0">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.337"/>
+                    <GradientStop Color="#FFFEFEFE" Offset="0.702"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+        <Button Content="Return" HorizontalAlignment="Left" Margin="30,67,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F4" Click="Button_Click" FontSize="18" Height="41" Width="70" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF551E81" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Ghicește 5 cuvinte pentru a câștiga jocul! :)" Grid.ColumnSpan="2" Margin="218,20,170,619" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+        <Button x:Name="btNext" Content="Next Word" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="590,573,0,0" VerticalAlignment="Top" Height="40" Width="110" FontFamily="Times New Roman" FontWeight="Bold" FontSize="20" FontStyle="Italic" Foreground="White" Click="btNext_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF8E12F1" Offset="0.525"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Ghicește cuvântul:" Grid.ColumnSpan="2" Margin="58,144,490,488" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Foreground="White" FontStyle="Italic" RenderTransformOrigin="0.456,0.62"/>
+        <Label Content="Descriere: " Grid.ColumnSpan="2" Margin="62,177,487,455" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+        <Label Content="Imagine: " Grid.ColumnSpan="2" Margin="350,177,198,456" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+        <Image x:Name="image" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="231" Margin="269,211,0,0" VerticalAlignment="Top" Width="282"/>
+        <TextBox x:Name="tbDescriere" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="62,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" Height="119" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="btFinish" Content="Finish" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="707,574,0,0" VerticalAlignment="Top" Height="40" Width="110" FontFamily="Times New Roman" FontSize="20" FontStyle="Italic" FontWeight="Bold" Foreground="White" Click="btFinish_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF8E12F1" Offset="0.525"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Răspunsuri corecte:" Grid.ColumnSpan="2" Margin="623,144,10,500" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+        <TextBox x:Name="tbRaspunsuriCorecte" Grid.ColumnSpan="2" Margin="692,181,0,0" Text="" Width="70" Height="30" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Introduce cuvântul:" Grid.ColumnSpan="2" Margin="56,574,556,52" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+        <TextBox x:Name="tbRaspunsCuvant" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="284,574,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="39" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="btStart" Content="Start" HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top" Height="72" Width="170" FontFamily="Times New Roman" FontSize="40" FontStyle="Italic" FontWeight="Bold" Foreground="White" Click="btStart_Click" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF8E12F1" Offset="0.525"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="PS: Denumirea cuvintelor incep cu literă mare! :) &#xD;&#xA; PS2: Cuvintele nu au sufix si sunt la singular! :)" Grid.ColumnSpan="2" Margin="62,500,406,125" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+
+
+
+    </Grid>
+</Window>

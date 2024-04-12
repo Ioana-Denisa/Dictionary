@@ -1,0 +1,63 @@
+﻿<Window x:Class="Tema1_Dictionar.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema1_Dictionar"
+        mc:Ignorable="d"
+        Title="Cautare" Height="690" Width="820" MinHeight="610" MinWidth="770" ResizeMode="CanResize" >
+
+    <Window.Resources>
+        <ObjectDataProvider x:Key="MyClassInstance" ObjectType="{x:Type local:DictionaryMethods}" />
+    </Window.Resources>
+
+    <Grid Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF48207B"/>
+                <GradientStop Color="#FFA319AB" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Style>
+            <Style/>
+        </Grid.Style>
+        <TextBlock x:Name="Title" VerticalAlignment="Top"
+                HorizontalAlignment="Left" FontSize="36" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" Grid.Column="1" Text=" Modulul de căutare de cuvinte" IsEnabled="False" Width="800">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFADADAD" Offset="0.406"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button Content="Return" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="15,49,0,0" VerticalAlignment="Top" Foreground="#FFF4F4F4" Click="Button_Click" FontSize="18" Height="41" Width="70" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF551E81" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Alegeți categoria în care doriți să căutați cuvântul: " Grid.ColumnSpan="2" Margin="57,119,149,428" Foreground="#FFF9F6F6" FontFamily="Times New Roman" FontWeight="Bold" FontSize="18"/>
+        <ComboBox x:Name="cbCategory" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="152,179,0,0" VerticalAlignment="Top" Width="183" Height="27"  SelectedValuePath="Content"  IsEditable="True"  IsTextSearchEnabled="False"   KeyUp="comboBox_KeyUp" SelectionChanged="cbCategory_SelectionChanged"/>
+        <Label Content="Categorii:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="47,177,0,0" VerticalAlignment="Top" Foreground="#FFF9F6F6" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold" Width="100"/>
+        <Label Content="Cuvinte:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="47,221,0,0" VerticalAlignment="Top" Foreground="#FFF9F6F6" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold" Width="100"/>
+        <ComboBox x:Name="cbCuvinte" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="152,223,0,0" VerticalAlignment="Top" Width="183" Height="27"  SelectedValuePath="Content"  IsEditable="True"  IsTextSearchEnabled="False"   KeyUp="comboBox_KeyUp" Text="{Binding Source={StaticResource MyClassInstance}, Path=PrintWordsInComboBox}" SelectionChanged="cbCuvinte_SelectionChanged"/>
+        <Label Content="Cuvânt:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="57,286,0,0" VerticalAlignment="Top" Foreground="#FFF9F6F6" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold" Width="100"/>
+        <Label Content="Descriere:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="57,354,0,0" VerticalAlignment="Top" Foreground="#FFF9F6F6" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold" Width="100"/>
+        <Label Content="Categorie:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="57,513,0,0" VerticalAlignment="Top" Foreground="#FFF9F6F6" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold" Width="100" RenderTransformOrigin="0.35,0.666"/>
+        <Label Content="Imagine:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="464,286,0,0" VerticalAlignment="Top" Foreground="#FFF9F6F6" FontSize="18" FontFamily="Times New Roman" FontWeight="Bold" Width="100"/>
+        <TextBox x:Name="tbCuvant" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="57,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" Height="24"/>
+        <TextBox x:Name="tbDescriere" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="57,390,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" Height="118"/>
+        <TextBox x:Name="tbCategorie" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="57,549,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" Height="25"/>
+        <Image x:Name="image" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="237" Margin="335,320,0,0" VerticalAlignment="Top" Width="310"/>
+
+
+
+
+    </Grid>
+</Window>

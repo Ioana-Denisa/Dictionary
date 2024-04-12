@@ -1,0 +1,13 @@
+Caine,Animal Domestic,Animal patruped ce latra,..\..\Resorce\caine.jpeg
+Masina,Vehicul,Mijloc de transport cu motor,..\..\Resorce\masina.jpeg
+Minge,Jucarie,Obiect sferic pentru joc,..\..\Resorce\minge.jpg
+Calculator,Tehnologie,Dispozitiv electronic pentru calcul,..\..\Resorce\calculator.png
+Munte,Geografie,Intindere de relief inalt,..\..\Resorce\munte.jpg
+Pisica,Animal Domestic,Animal ce toarce,..\..\Resorce\pisica.jpeg
+Papusa,Jucarie,Jucarie de plus sau nu cu rochita,..\..\Resorce\papusa.jpeg
+Gaina,Pasare,Perechea cocosului,..\..\Resorce\gaina.jpeg
+Cocos,Pasare,Perechea gainii,..\..\Resorce\cocos.jpg
+Brasov,Oras,Oras de poveste,..\..\Resorce\brasov.jpg
+Bucuresti,Oras,Capitala Romaniei,..\..\Resorce\bucuresti.jpg
+Orhidee,Floare,Floare ce ofera o frumusete aparte care prezinta o tija sau mai multe si difera prin multe culori,..\..\Resorce\orhidee.jpg
+
